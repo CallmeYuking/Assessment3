@@ -8,9 +8,11 @@
 
 <!-- Create a div for every Most Loved Melon using a Jinja for loop -->
     <div class='melon-div'>
-        <h3>Texas Golden Watermelon</h3>
-        <h2>Loved 598 times.</h2>
-        <img src='http://www.rareseeds.com/assets/1/14/DimThumbnail/Texas-Golden-2-Watermelon-web.jpg'>
+        {% for melon in MOST_LOVED_MELONS %}
+        <h3>{{MOST_LOVED_MELONS.name}}</h3>
+        <h2>{{MOST_LOVED_MELONS.num_loves}}</h2>
+        <img {{MOST_LOVED_MELONS.img}}>
+
     </div>
 
 

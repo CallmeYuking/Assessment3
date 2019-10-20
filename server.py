@@ -35,7 +35,9 @@ MOST_LOVED_MELONS = {
 }
 
 # YOUR ROUTES GO HERE
-
+@app.route('/top_melons'):
+    def top_melons():
+        return render_template('top_melons', melon=MOST_LOVED_MELONS)
 
 if __name__ == "__main__":
     # We have to set debug=True here, since it has to be True at the
