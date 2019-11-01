@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Melons</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <form action="/get-name"> 
+    </form>
+
+    <h1>Welcome, {{user_name}}</h1>
+
+<!-- Create a div for every Most Loved Melon using a Jinja for loop -->
+    <div class='melon-div'>
+        {% for melon in MOST_LOVED_MELONS %}
+        <h3>{{MOST_LOVED_MELONS.name}}</h3>
+        <h2>{{MOST_LOVED_MELONS.num_loves}}</h2>
+        <img {{MOST_LOVED_MELONS.img}}>
+        {% endfor %}
+
+    </div>
+
+
+</body>
+</html>
